@@ -1,0 +1,38 @@
+{
+  "url": {
+    "api": "http://192.168.225.124:8000"
+  },
+  "message": {
+    "error": {
+      "timers": {
+        "short": 1000,
+        "default": 2000,
+        "long": 4000
+      }
+    }
+  },
+  "product": {
+    "types": {
+      "cloth": {
+        "id": 1,
+        "name": "Cloth"
+      },
+      "accessory": {
+        "id": 2,
+        "name": "Accessories"
+      }
+    }
+  },
+  "user": {
+    "gender": {
+      "male": {
+        "id": 1,
+        "name": "Male"
+      },
+      "female": {
+        "id": 2,
+        "name": "Female"
+      }
+    }
+  }
+}

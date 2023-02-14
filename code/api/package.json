@@ -1,0 +1,45 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm run setup:install && npm run setup:db",
+    "setup:install": "npm install",
+    "setup:db": "npm run db:migrate && npm run db:seed",
+    "db:migrate": "./node_modules/.bin/sequelize db:migrate",
+    "db:seed": "./node_modules/.bin/sequelize db:seed:all",
+    "start": "nodemon src/index.js --exec babel-node",
+    "start:prod": "npm run build:prod && npm run start:server",
+    "build:prod": "babel src -s -D -d build",
+    "start:server": "node build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "7.11.6",
+    "@babel/core": "7.11.6",
+    "@babel/node": "7.10.5",
+    "@babel/plugin-transform-runtime": "7.11.5",
+    "@babel/preset-env": "7.11.5",
+    "nodemon": "2.0.4"
+  },
+  "dependencies": {
+    "@babel/runtime": "7.11.2",
+    "bcrypt": "5.0.0",
+    "body-parser": "1.19.0",
+    "cookie-parser": "1.4.5",
+    "cors": "2.8.5",
+    "dotenv": "8.2.0",
+    "express": "4.17.1",
+    "express-graphql": "0.9.0",
+    "graphql": "14.6.0",
+    "jsonwebtoken": "8.5.1",
+    "morgan": "1.10.0",
+    "multer": "1.4.2",
+    "mysql2": "2.1.0",
+    "sequelize": "5.21.12",
+    "sequelize-cli": "5.5.1"
+  }
+}

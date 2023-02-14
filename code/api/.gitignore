@@ -1,0 +1,4 @@
+node_modules/
+build/
+public/images/uploads/*
+!public/images/uploads/.gitkeep
